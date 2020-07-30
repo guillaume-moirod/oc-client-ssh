@@ -48,6 +48,8 @@ RUN chgrp -R 0 /var/run/sshd && \
 
 RUN chgrp -R 0 /root/.ssh && \
     chmod -R g=u /root/.ssh
+    
+RUN chmod g+w /var/run
 
 RUN chmod g=u /etc/passwd
 
